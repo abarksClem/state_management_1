@@ -8,10 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'State Management Exercise',
-      home: CounterPage(),
-    );
+    return MaterialApp(title: 'State Management Exercise', home: CounterPage());
   }
 }
 
@@ -47,14 +44,15 @@ class _CounterPageState extends State<CounterPage> {
 
   @override
   Widget build(BuildContext context) {
-
     //Simple way to check if background is dark or not and change the text color
     //based on what it is. Dark backgrounds get white text, light ones get dark text
-    Color textColor = ThemeData.estimateBrightnessForColor(currentColor) == Brightness.dark
-      ? Colors.white
-      : Colors.black;
+    Color textColor =
+        ThemeData.estimateBrightnessForColor(currentColor) == Brightness.dark
+        ? Colors.white
+        : Colors.black;
 
     return Scaffold(
+      // TODO: Step 4 – Set backgroundColor of Scaffold to currentColor
       backgroundColor: currentColor,
       appBar: AppBar(title: Text("Counter + Color Exercise")),
 
